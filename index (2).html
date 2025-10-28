@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Portfolio</title>
+  <style>
+    /* ===== RESET ===== */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    /* ===== BODY ===== */
+    body {
+      font-family: "Poppins", Arial, sans-serif;
+      background: linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.75)),
+                  url('/Den/0f89eee10dd0883ed50bc57d5655a102.jpg');
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+      color: #fff;
+      line-height: 1.6;
+    }
+
+    /* ===== HEADER ===== */
+    header {
+      background: rgba(0, 0, 0, 0.7);
+      padding: 20px 0;
+      text-align: center;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.4);
+    }
+
+    header h1 {
+      font-size: 2.2em;
+      letter-spacing: 1px;
+      color: #fff;
+    }
+
+    /* ===== ABOUT SECTION ===== */
+    .about {
+      max-width: 900px;
+      margin: 50px auto;
+      text-align: center;
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 20px;
+      padding: 40px;
+      backdrop-filter: blur(6px);
+    }
+
+    .about img {
+      border-radius: 50%;
+      width: 200px;
+      height: 200px;
+      object-fit: cover;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.5);
+      transition: transform 0.3s;
+    }
+
+    .about img:hover {
+      transform: scale(1.05);
+    }
+
+    .about p {
+      margin-top: 20px;
+      font-size: 1.05em;
+      color: #eee;
+    }
+
+    .about figcaption {
+      font-style: italic;
+      font-size: 0.9em;
+      color: #ddd;
+    }
+
+    /* ===== GALLERY ===== */
+    .gallery {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      overflow-x: auto;
+      padding: 30px 10px;
+    }
+
+    .gallery figure {
+      text-align: center;
+    }
+
+    .gallery img {
+      width: 280px;
+      height: 280px;
+      border-radius: 15px;
+      border: 2px solid #fff; /* ✅ White border added */
+      box-shadow: 0 3px 15px rgba(0,0,0,0.4);
+      transition: transform 0.3s, box-shadow 0.1s, border-color 0.1s;
+    }
+
+    .gallery img:hover {
+      transform: scale(1.05);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.6);
+      border-color: #ffcd38; /* optional hover glow */
+    }
+
+    .gallery figcaption {
+      margin-top: 10px;
+      font-size: 0.9em;
+      color: #ddd;
+    }
+
+    /* ===== VIDEO SECTION ===== */
+    .videos {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 20px;
+      margin: 50px 0;
+    }
+
+    .video-item {
+      text-align: center;
+    }
+
+    .video-item p {
+      margin-top: 10px;
+      color: #eee;
+      font-size: 0.95em;
+      font-style: italic;
+    }
+
+    iframe {
+      border-radius: 15px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+    }
+
+    /* ===== LINKS SECTION ===== */
+    .links {
+      background: rgba(255, 255, 255, 0.1);
+      padding: 30px;
+      border-radius: 20px;
+      width: 80%;
+      max-width: 800px;
+      margin: 50px auto;
+      text-align: left;
+    }
+
+    .links h2 {
+      text-align: center;
+      margin-bottom: 20px;
+      color: #fff;
+    }
+
+    .links a {
+      color: #ffcd38;
+      text-decoration: none;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+
+    .links a:hover {
+      color: #fff;
+    }
+
+    ul {
+      list-style: none;
+      margin-top: 10px;
+    }
+
+    li {
+      margin: 10px 0;
+    }
+
+    /* ===== FEEDBACK FORM ===== */
+    .feedback {
+      background: rgba(255,255,255,0.9);
+      color: #333;
+      padding: 40px;
+      border-radius: 20px;
+      max-width: 600px;
+      margin: 50px auto;
+      text-align: center;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    }
+  .toturial {
+      text-align: center;
+   }
+ Project{
+      text-align: center;
+}
+    textarea {
+      width: 100%;
+      height: 120px;
+      border-radius: 10px;
+      border: 1px solid #ccc;
+      padding: 10px;
+      resize: none;
+      font-family: "Poppins", sans-serif;
+    }
+
+    button {
+      margin-top: 15px;
+      background-color: #222;
+      color: #fff;
+      padding: 12px 25px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    button:hover {
+      background-color: #444;
+    }
+
+    /* ===== FOOTER ===== */
+    footer {
+      background: rgba(0,0,0,0.8);
+      padding: 20px;
+      text-align: center;
+      color: #ccc;
+      font-size: 0.9em;
+      margin-top: 50px;
+    }
+
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>MY Portfolio</h1>
+  </header>
+
+  <!-- ABOUT -->
+  <section class="about">
+    <figure>
+      <img src="/Den/1761627108749.jpg" alt="Den Sillador">
+      <figcaption>"A work in progress, but always moving forward"</figcaption>
+    </figure>
+Explore and enjoy a collection of who I am and what I create — from my story and projects to videos and images that reflect my journey. Dive in, get inspired, and discover the world through my eyes.
+  </section>
+
+  <!-- GALLERY -->
+  <section class="gallery">
+    
+    <figure>
+      <img src="/Den/1761625738371.jpg" alt="TikTok edit sample">
+      <figcaption>Creative Alight Motion edits<br> with 33K+ followers and 1.8M likes</figcaption>
+    </figure>
+    <figure>
+      <img src="/Den/1761626009705.jpg" alt="Alight Motion transition">
+      <figcaption>My TikTok edits have gained millions of views<br> with creative transitions and cinematic style.</figcaption>
+    </figure>
+    <figure>
+      <img src="/Den/Picsart_25-09-05_18-56-43-044.jpg" alt="Smooth transitions">
+      <figcaption>I craft smooth, professional transitions in <br> Alight Motion with layered clips and effects.</figcaption>
+    </figure>
+  </section>
+
+  <!-- VIDEOS -->
+  <section class="videos">
+    <div class="video-item">
+      <iframe width="280" height="280" src="https://www.youtube.com/embed/ApXoWvfEYVU" allowfullscreen></iframe>
+      <p>"Creative Motion Edit</p>
+    </div>
+
+    <div class="video-item">
+      <iframe width="280" height="280" src="https://www.youtube.com/embed/QBgl4rVz3Ks" allowfullscreen></iframe>
+      <p>"Alight Motion Cinematic Style"</p>
+    </div>
+
+    <div class="video-item">
+      <iframe width="280" height="280" src="https://www.youtube.com/embed/pSZjq5CxRsk" allowfullscreen></iframe>
+      <p>"Every Breath You Take"</p>
+    </div>
+  </section>
+      <section class="toturial">
+    <h2>Favorite music</h2>
+  </section>
+
+  <h5 style="text-align:center; margin: 0 20px;">
+    I love listening to music because it lifts my mood, calms my mind, and makes me feel connected to my emotions. Every song tells a story, and through music I can relax.
+  </h5>
+
+  <!-- LINKS -->
+  <section class="links">
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <section class="Project">
+    <h2>Projects</h2>
+    <ul>
+      <li><strong>Canva Portfolio:</strong> <a href="https://www.canva.com/design/DAGvwoPdMPw/e11TI-kWbuTGVh05xjxojA/edit?utm_content=DAGvwoPdMPw&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton" target="_blank">View Design</a></li>
+      <li><strong>My 3 AI Tools:</strong> <a href="https://www.canva.com/design/DAGyA90iBgI/bTa1t0yOYSilEKENZWPRGA/view?utm_content=DAGyA90iBgI&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks" target="_blank">View Design</a></li>
+      <li><strong>Figma Prototype:</strong> <a href="https://www.figma.com/proto/eNpd6PMjbJsAcZO8YDhKoZ?node-id=0:1" target="_blank">View Design</a></li>
+    </ul>
+  </section>
+
+  <!-- FEEDBACK -->
+  <section class="feedback">
+    <h2>Leave a Message or Feedback</h2>
+    <textarea placeholder="Type your message here..."></textarea><br>
+    <button>Submit</button>
+  </section>
+
+  <footer>
+    © 2025 Den Sillador | Designed using HTML 
+  </footer>
+
+</body>
+</html>
